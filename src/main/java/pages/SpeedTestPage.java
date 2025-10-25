@@ -12,9 +12,8 @@ public class SpeedTestPage extends BasePage {
 	By gobuttonlocator = By.xpath("//*[@class='js-start-test test-mode-multi']");
 	By continueButtonlocator = By.id("onetrust-accept-btn-handler");
 	By downloadspeed = By.xpath("//span[@class='result-data-large number result-data-value download-speed'and(@data-download-status-value='0.01' or @data-download-status-value='0.02')]");
-		    
-	By uploadspeed =  By.xpath(
-		    "//span[contains(@class,'result-data-large number result-data-value upload-speed')and(@data-upload-status-value='0.01' or @data-upload-status-value='0.02')]");
+	By uploadspeed = By.xpath("//span[@class='result-data-large number result-data-value upload-speed'and(@data-upload-status-value='0.01' or @data-upload-status-value='0.02')]");
+	By Browsinginfo = By.xpath("//div[@class='MuiBox-root css-dfpqc0'][2]");
 	
 	public SpeedTestPage(WebDriver driver) {
 		super(driver);
@@ -37,10 +36,10 @@ public class SpeedTestPage extends BasePage {
 	{
 		WebElement downloaddata = wait.until(ExpectedConditions.visibilityOfElementLocated(downloadspeed));
 		String downloadinfo = downloaddata.getText();
-		System.out.println("The Download Speed is:"+ downloadinfo);
+		System.out.println("The Download Speed is:"+ downloadinfo+" Mbps");
 		
 		WebElement uploaddata = wait.until(ExpectedConditions.visibilityOfElementLocated(uploadspeed));
 		String uploadinfo = uploaddata.getText();
-		System.out.println("The Upload Speed is: "+uploadinfo);
+		System.out.println("The Upload Speed is: "+uploadinfo+" Mbps");
 	}
 }

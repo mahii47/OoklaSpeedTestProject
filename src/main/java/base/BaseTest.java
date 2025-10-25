@@ -19,7 +19,6 @@ public class BaseTest {
 		speedpage = new SpeedTestPage(driver);
 		driver.manage().window().maximize();
 		driver.get("https://www.speedtest.net/");
-		
 	}
 	@AfterTest
 	public void teardown()
