@@ -37,10 +37,10 @@ public class SpeedTestPage extends BasePage {
 	{
 		WebElement downloaddata = wait.until(ExpectedConditions.visibilityOfElementLocated(downloadspeed));
 		String downloadinfo = downloaddata.getText();
-		System.out.println("The download Speed "+ downloadinfo);
+		System.out.println("The Download Speed is:"+ downloadinfo);
 		
 		WebElement uploaddata = wait.until(ExpectedConditions.visibilityOfElementLocated(uploadspeed));
 		String uploadinfo = uploaddata.getText();
-		System.out.println("The upload speed "+uploadinfo);
+		System.out.println("The Upload Speed is: "+uploadinfo);
 	}
 }

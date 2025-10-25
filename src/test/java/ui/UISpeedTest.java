@@ -4,13 +4,20 @@ import base.BaseTest;
 import pages.SpeedTestPage;
 
 public class UISpeedTest extends BaseTest {
-	
-	@Test
+
+	@Test(priority=1,dependsOnMethods={"verifyPrivacyButton"})
 	public void verifyInternetSpeed() throws InterruptedException
 	{
-		SpeedTestPage speedpage = new SpeedTestPage(driver);
+		speedpage.checkInternet();	
+	}
+	@Test(priority=0)
+	public void verifyPrivacyButton()
+	{
 		speedpage.privacybutton();
-		speedpage.checkInternet();
+	}
+	@Test(priority=2)
+	public void verifySpeedTest()
+	{
 		speedpage.checkSpeedTest();
 	}
 }

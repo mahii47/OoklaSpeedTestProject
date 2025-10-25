@@ -6,8 +6,8 @@
       <class name="ui.UISpeedTest">
         <methods>
           <include name="setup"/>
+          <include name="verifySpeedTest"/>
           <include name="teardown"/>
-          <include name="verifyInternetSpeed"/>
         </methods>
       </class> <!-- ui.UISpeedTest -->
     </classes>
