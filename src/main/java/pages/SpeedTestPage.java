@@ -11,8 +11,8 @@ public class SpeedTestPage extends BasePage {
 	
 	By gobuttonlocator = By.xpath("//*[@class='js-start-test test-mode-multi']");
 	By continueButtonlocator = By.id("onetrust-accept-btn-handler");
-	By downloadspeed = By.xpath("//span[@class='result-data-large number result-data-value download-speed'and(@data-download-status-value='0.01' or @data-download-status-value='0.02')]");
-	By uploadspeed = By.xpath("//span[@class='result-data-large number result-data-value upload-speed'and(@data-upload-status-value='0.01' or @data-upload-status-value='0.02')]");
+	By downloadspeed = By.xpath("//span[contains(@class,'download-speed') and not(text()='—')]");			
+	By uploadspeed = By.xpath("//span[contains(@class,'upload-speed') and not(text()='—')]");
 	By Browsinginfo = By.xpath("//div[@class='MuiBox-root css-dfpqc0'][2]");
 	
 	public SpeedTestPage(WebDriver driver) {
