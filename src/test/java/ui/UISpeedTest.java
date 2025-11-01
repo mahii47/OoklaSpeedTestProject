@@ -1,8 +1,6 @@
 package ui;
 import org.testng.annotations.Test;
 import base.BaseTest;
-import pages.SpeedTestPage;
-
 public class UISpeedTest extends BaseTest {
 
 	@Test(priority=1,dependsOnMethods={"verifyPrivacyButton"})
